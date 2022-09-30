@@ -166,3 +166,4 @@ git branch --show-current
 git remote add origin <remote repository URL>
 
 git branch -D …
+Nguyen Duc Quyen
