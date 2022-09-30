@@ -1,5 +1,3 @@
-# rn25-NguyenDucQuyen
-
 > Documents of course will be move to (https://documents.aptech.io/docs/category/aptech-mern)
 
 # ⭐ A. SETUP DEVELOPMENT ENVIROMENT
