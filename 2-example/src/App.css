@@ -1,9 +1,58 @@
 .App {
-  text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   color: red;
 }
-
+.app--style {
+  font-size: 20px;
+  color: yellow;
+}
+.header {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+}
+.session-list {
+  list-style: none;
+  padding: 0;
+}
+.session-item {
+  color: gray;
+  font-size: 15px;
+  border-bottom: 1px solid gray;
+  margin: 10px 0 20px;
+}
+.session-main {
+  color: black;
+}
+.session-content {
+  color: black;
+  font-size: 13px;
+}
+.session-img {
+  width: 100%;
+}
+.session-aisde {
+  /* background-color: rgb(33, 184, 240); */
+  list-style: none;
+  padding: 15px;
+  color: black;
+}
+.session-list-quesion {
+  font-size: 25px;
+}
+.session-aside-question {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.footer {
+  margin-top: 10px;
+  text-align: center;
+}
+.footer-end {
+  font-size: 15px;
+  color: gray;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
