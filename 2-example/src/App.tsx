@@ -25,7 +25,7 @@ function App() {
       <div className="header"></div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 col-sm-3">
+          <div className="col-12 col-md-3 col-sm-6">
             <ul className="session-list">
               <li className="session-item">The Drive</li>
               <li className="session-item">The Walk</li>
@@ -33,7 +33,7 @@ function App() {
               <li className="session-item">The End</li>
             </ul>
           </div>
-          <div className="col-12 col-sm-6">
+          <div className="col-12 col-md-6 col-sm-6">
             <h1 className="session-main">The walk</h1>
             <p className="session-content">
               Bootstrap employs a handful of important global styles and
@@ -47,7 +47,7 @@ function App() {
               alt="Street NewYork"
             />
           </div>
-          <div className="col-12 col-sm-3 ">
+          <div className="col-12 col-md-3 col-sm-6 ">
             <ul className="session-aisde bg-info">
               <li className="session-list-quesion">What</li>
               <li className="session-aside-question">What is your name?</li>
