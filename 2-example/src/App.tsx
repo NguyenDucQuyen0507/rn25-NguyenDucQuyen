@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Components/Header";
 import Content from "./Components/Content";
 import Footer from "./Components/Footer";
+import * as ReactIcons from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import "./App.css";
 import "./Homeworks/Session2/Basic.css";
@@ -11,6 +12,8 @@ import Basic3 from "./Homeworks/Session2/Basic3";
 import BlockUI1 from "./Homeworks/Session2/BlockUI1";
 import Index from "./Homeworks/Session2/BlockUI2/Index";
 import BlockUI3 from "./Homeworks/Session2/BlockUI3/Block";
+import BlockUI4 from "./Homeworks/BlockUI4/BlockUI4";
+import BlockUI5 from "./Homeworks/Session2/BlockUI5/BlockUI5";
 import CountDown from "./Components/CountDown";
 import LifecyCountDown from "./Components/LifecyCountDown";
 import LifecyCountDownFunction from "./Components/LifecyCountDownFunction";
@@ -88,23 +91,35 @@ function App() {
       <Basic3 />
       <BlockUI1 />
       <BlockUI2 /> */}
-      <BlockUI1 />
+      {/* <BlockUI1 />
       <Index
         text="Color"
         color="pink"
         color1="rgb(206, 85, 105)"
         percent={10}
-      />
-      <Index text="Red" color="red" color1="rgb(241, 49, 81)" percent={50} />
-      <Index text="Black" color="black" color1="rgb(39, 15, 19)" percent={60} />
+      /> */}
+      {/* <Index text="Red" color="red" color1="rgb(241, 49, 81)" percent={50} />
+      <Index text="Black" color="black" color1="rgb(39, 15, 19)" percent={60} /> */}
       <BlockUI3
-        icon="FaFacebookSquare "
-        icon1=""
-        icon2=""
-        icon3=" "
-        color="rgb(54, 15, 252)"
-        color1="red"
+        icon={<ReactIcons.FaFacebook />}
+        icon1={<ReactIcons.FaTwitter />}
+        icon2={<ReactIcons.FaGoogle />}
+        icon3={<ReactIcons.FaPinterest />}
+        color="rgb(51, 65, 223)"
+        color1="rgb(71, 178, 235)"
+        color2="rgb(217, 247, 110)"
+        color3="rgb(253, 125, 230)"
+        text="FaceBook And You"
+        text1="Twitter And You"
+        text2="Google And You"
+        text3="Pinterest And You"
       />
+      <BlockUI4
+        day="TODAY VISTORS"
+        number="123"
+        arrayChart={[50, 10, 30, 80]}
+      />
+      <BlockUI5 />
       {/* <CountDown /> */}
       {/* <LifecyCountDown /> */}
       {/* <LifecyCountDownFunction /> */}
