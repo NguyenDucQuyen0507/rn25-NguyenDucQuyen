@@ -1,15 +1,19 @@
 import React from "react";
-// import logo from "./logo.svg";
-// import img from "./logo1.png";
 import Header from "./Components/Header";
 import Content from "./Components/Content";
 import Footer from "./Components/Footer";
+import { FaFacebookSquare } from "react-icons/fa";
 import "./App.css";
+import "./Homeworks/Session2/Basic.css";
 import Basic1 from "./Homeworks/Session2/Basic1";
 import Basic2 from "./Homeworks/Session2/Basic2";
 import Basic3 from "./Homeworks/Session2/Basic3";
 import BlockUI1 from "./Homeworks/Session2/BlockUI1";
-import BlockUI2 from "./Homeworks/Session2/BlockUI2";
+import Index from "./Homeworks/Session2/BlockUI2/Index";
+import BlockUI3 from "./Homeworks/Session2/BlockUI3/Block";
+import CountDown from "./Components/CountDown";
+import LifecyCountDown from "./Components/LifecyCountDown";
+import LifecyCountDownFunction from "./Components/LifecyCountDownFunction";
 function App() {
   let style = { color: "red", fontSize: 20 };
   let isLogin = true;
@@ -78,11 +82,32 @@ function App() {
     //   <Footer />
     // </>
     <>
-      <Basic1 />
+      {/* Baif tap VN */}
+      {/* <Basic1 />
       <Basic2 />
       <Basic3 />
       <BlockUI1 />
-      <BlockUI2 />
+      <BlockUI2 /> */}
+      <BlockUI1 />
+      <Index
+        text="Color"
+        color="pink"
+        color1="rgb(206, 85, 105)"
+        percent={10}
+      />
+      <Index text="Red" color="red" color1="rgb(241, 49, 81)" percent={50} />
+      <Index text="Black" color="black" color1="rgb(39, 15, 19)" percent={60} />
+      <BlockUI3
+        icon="FaFacebookSquare "
+        icon1=""
+        icon2=""
+        icon3=" "
+        color="rgb(54, 15, 252)"
+        color1="red"
+      />
+      {/* <CountDown /> */}
+      {/* <LifecyCountDown /> */}
+      {/* <LifecyCountDownFunction /> */}
     </>
   );
 }
