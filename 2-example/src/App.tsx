@@ -14,6 +14,8 @@ import Index from "./Homeworks/Session2/BlockUI2/Index";
 import BlockUI3 from "./Homeworks/Session2/BlockUI3/Block";
 import BlockUI4 from "./Homeworks/BlockUI4/BlockUI4";
 import BlockUI5 from "./Homeworks/Session2/BlockUI5/BlockUI5";
+import BlockUI6 from "./Homeworks/Session2/BlockUI6/BlockUI6";
+import BlockUI7 from "./Homeworks/Session2/BlockUI7/BlockUI7";
 import CountDown from "./Components/CountDown";
 import LifecyCountDown from "./Components/LifecyCountDown";
 import LifecyCountDownFunction from "./Components/LifecyCountDownFunction";
@@ -100,7 +102,7 @@ function App() {
       /> */}
       {/* <Index text="Red" color="red" color1="rgb(241, 49, 81)" percent={50} />
       <Index text="Black" color="black" color1="rgb(39, 15, 19)" percent={60} /> */}
-      <BlockUI3
+      {/* <BlockUI3
         icon={<ReactIcons.FaFacebook />}
         icon1={<ReactIcons.FaTwitter />}
         icon2={<ReactIcons.FaGoogle />}
@@ -113,13 +115,38 @@ function App() {
         text1="Twitter And You"
         text2="Google And You"
         text3="Pinterest And You"
-      />
-      <BlockUI4
+      /> */}
+      {/* <BlockUI4
         day="TODAY VISTORS"
         number="123"
         arrayChart={[50, 10, 30, 80]}
+      /> */}
+      {/* <BlockUI5 />
+      <BlockUI6
+        title="Quyen"
+        text="nguyen duc quyen"
+        size="XL/X"
+        icon={[<ReactIcons.FaDollarSign />, <ReactIcons.FaCartPlus />]}
+        money={20}
+        button="Add To Cart"
+      /> */}
+      <BlockUI7
+        shop="YOUNG SHOP"
+        icon={<ReactIcons.FaDollarSign />}
+        money1={[1.422, 96]}
+        money2={[1.0025]}
+        moneySale="18% off"
+        brand="LG White Front Load Steam Washer"
+        star={[
+          <ReactIcons.FaStar />,
+          <ReactIcons.FaStar />,
+          <ReactIcons.FaStar />,
+          <ReactIcons.FaStar />,
+          <ReactIcons.FaStarHalfAlt />,
+        ]}
+        sold={10}
+        range={[50]}
       />
-      <BlockUI5 />
       {/* <CountDown /> */}
       {/* <LifecyCountDown /> */}
       {/* <LifecyCountDownFunction /> */}
