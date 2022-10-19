@@ -19,68 +19,76 @@ import BlockUI7 from "./Homeworks/Session2/BlockUI7/BlockUI7";
 import CountDown from "./Components/CountDown";
 import LifecyCountDown from "./Components/LifecyCountDown";
 import LifecyCountDownFunction from "./Components/LifecyCountDownFunction";
+import Practive from "./Components/Practive";
+import ButtonLike from "./Components/ButtonLike";
+import Star from "./Components/Star";
 function App() {
   let style = { color: "red", fontSize: 20 };
   let isLogin = true;
+
+  function isSnt(n: number) {
+    var dem = 0;
+    if (n < 2) return false;
+    for (let i = 0; i <= n; i++) {
+      if (n % i == 0) {
+        dem++;
+      } else {
+      }
+    }
+    if (dem == 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  var snt = [10, 5, 7, 2, 1];
+  function isSntArray(arr: number[]) {
+    console.log("Các số nguyên tố có trong mảng " + arr + " là: ");
+    for (let i = 0; i < arr.length; i++) {
+      if (isSnt(arr[i]) == true) {
+        console.log(arr[i]);
+      } else {
+      }
+    }
+  }
+  // Snt(snt);
+  isSntArray(snt);
+
+  function isSdx(n: number) {
+    // var temp,
+    //   keep,
+    //   reverse = 0;
+    let temp: number = 0;
+    let reverse: number = 0;
+    let keep: number = 0;
+    temp = n;
+    while (temp != 0) {
+      keep = temp % 10;
+      reverse = reverse * 10 + keep;
+      temp = temp / 10;
+      console.log(keep, reverse, temp);
+    }
+    console.log(keep, reverse);
+    // console.log(n, temp);
+    if (reverse == n) {
+      console.log(n + " là số đối xứng");
+    } else {
+      console.log(n + " không phải là số đối xứng");
+    }
+  }
+  isSdx(111);
+  // Mua xăng
+  // N=7
+  // 1L:3
+  // 2L:4
+  // case 1: b<= 2a ->b
+  // 3 2L: 1 1L : 15
+  // 3: phan nguyen 7/2 ?? parsetInt(7/2) *b
+
+  // case2: b >2a ->a
+  // N *a
+
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img style={style} src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.tsx</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-
-    //   <div className="header"></div>
-    //   <div className="container-fluid">
-    //     <div className="row">
-    //       <div className="col-12 col-md-3 col-sm-6">
-    //         <ul className="session-list">
-    //           <li className="session-item">The Drive</li>
-    //           <li className="session-item">The Walk</li>
-    //           <li className="session-item">The Return</li>
-    //           <li className="session-item">The End</li>
-    //         </ul>
-    //       </div>
-    //       <div className="col-12 col-md-6 col-sm-6">
-    //         <h1 className="session-main">The walk</h1>
-    //         <p className="session-content">
-    //           Bootstrap employs a handful of important global styles and
-    //           settings, all of which are almost exclusively geared towards the
-    //           normalization of cross browser styles. Let’s dive in.
-    //         </p>
-    //         <img
-    //           className="session-img"
-    //           // src="https://a.cdn-hotels.com/gdcs/production181/d458/10eb7c5f-a291-46d5-ae63-83f6e4555fa2.jpg"
-    //           src={img}
-    //           alt="Street NewYork"
-    //         />
-    //       </div>
-    //       <div className="col-12 col-md-3 col-sm-6 ">
-    //         <ul className="session-aisde bg-info">
-    //           <li className="session-list-quesion">What</li>
-    //           <li className="session-aside-question">What is your name?</li>
-    //           <li className="session-list-quesion">Where</li>
-    //           <li className="session-aside-question">Where do you live?</li>
-    //           <li className="session-list-quesion">Price</li>
-    //           <li className="session-aside-question">How much to buy a car?</li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className="footer">
-    //     <h1 className="footer-end">@2022 ApTech DA NANG</h1>
-    //   </div>
-    // </div>
-
     // <>
     //   <Header isLogin={isLogin} />
     //   <Content />
@@ -130,7 +138,7 @@ function App() {
         money={20}
         button="Add To Cart"
       /> */}
-      <BlockUI7
+      {/* <BlockUI7
         shop="YOUNG SHOP"
         icon={<ReactIcons.FaDollarSign />}
         money1={[1.422, 96]}
@@ -146,10 +154,15 @@ function App() {
         ]}
         sold={10}
         range={[50]}
-      />
+      /> */}
       {/* <CountDown /> */}
       {/* <LifecyCountDown /> */}
       {/* <LifecyCountDownFunction /> */}
+      {/* <Practive count={0} /> */}
+      <ButtonLike
+      // icon={<ReactIcons.Lik />}
+      />
+      <Star />
     </>
   );
 }

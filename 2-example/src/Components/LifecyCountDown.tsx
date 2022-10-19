@@ -15,9 +15,9 @@ class LifecyCountDown extends React.Component<Props, State> {
     console.log("constructor");
   }
   handleClick = () => {
-    setInterval(() => {
-      this.setState({ number: this.state.number - 1 });
-    }, 1000);
+    // setInterval(() => {
+    this.setState({ number: this.state.number - 1 });
+    // }, 1000);
   };
   public render() {
     return (

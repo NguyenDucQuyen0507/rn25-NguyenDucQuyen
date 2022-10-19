@@ -4,7 +4,7 @@ type Props = {};
 interface Object {
   number: number;
 }
-function LifecyCountDownFunction({}: Props) {
+function LifecyCountDownFunction() {
   const [numberState, useNumberState] = useState<Object>({
     number: 100,
   });
