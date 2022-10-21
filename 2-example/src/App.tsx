@@ -12,7 +12,7 @@ import Basic3 from "./Homeworks/Session2/Basic3";
 import BlockUI1 from "./Homeworks/Session2/BlockUI1";
 import Index from "./Homeworks/Session2/BlockUI2/Index";
 import BlockUI3 from "./Homeworks/Session2/BlockUI3/Block";
-import BlockUI4 from "./Homeworks/BlockUI4/BlockUI4";
+import BlockUI4 from "./Homeworks/Session2/BlockUI4/BlockUI4";
 import BlockUI5 from "./Homeworks/Session2/BlockUI5/BlockUI5";
 import BlockUI6 from "./Homeworks/Session2/BlockUI6/BlockUI6";
 import BlockUI7 from "./Homeworks/Session2/BlockUI7/BlockUI7";
@@ -22,61 +22,68 @@ import LifecyCountDownFunction from "./Components/LifecyCountDownFunction";
 import Practive from "./Components/Practive";
 import ButtonLike from "./Components/ButtonLike";
 import Star from "./Components/Star";
+import Form from "./Components/Buoi6/Form";
+import ClassComponent from "./Homeworks/Session3/ClassComponentLike";
+import ClassComponentImg from "./Homeworks/Session3/ClassComponentImg";
+import FormUI from "./Homeworks/Session6/FormUI";
+import SimpleExample from "./Components/Buoi6/SimpleExample";
+import MultipleInputFieldsExample from "./Components/Buoi6/MultipleInputFieldExample";
+import FormMilk from "./Components/Buoi6/FormMilk";
 function App() {
   let style = { color: "red", fontSize: 20 };
   let isLogin = true;
 
-  function isSnt(n: number) {
-    var dem = 0;
-    if (n < 2) return false;
-    for (let i = 0; i <= n; i++) {
-      if (n % i == 0) {
-        dem++;
-      } else {
-      }
-    }
-    if (dem == 2) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  var snt = [10, 5, 7, 2, 1];
-  function isSntArray(arr: number[]) {
-    console.log("Các số nguyên tố có trong mảng " + arr + " là: ");
-    for (let i = 0; i < arr.length; i++) {
-      if (isSnt(arr[i]) == true) {
-        console.log(arr[i]);
-      } else {
-      }
-    }
-  }
-  // Snt(snt);
-  isSntArray(snt);
+  // function isSnt(n: number) {
+  //   var dem = 0;
+  //   if (n < 2) return false;
+  //   for (let i = 0; i <= n; i++) {
+  //     if (n % i == 0) {
+  //       dem++;
+  //     } else {
+  //     }
+  //   }
+  //   if (dem == 2) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  // var snt = [10, 5, 7, 2, 1];
+  // function isSntArray(arr: number[]) {
+  //   console.log("Các số nguyên tố có trong mảng " + arr + " là: ");
+  //   for (let i = 0; i < arr.length; i++) {
+  //     if (isSnt(arr[i]) == true) {
+  //       console.log(arr[i]);
+  //     } else {
+  //     }
+  //   }
+  // }
+  // // Snt(snt);
+  // isSntArray(snt);
 
-  function isSdx(n: number) {
-    // var temp,
-    //   keep,
-    //   reverse = 0;
-    let temp: number = 0;
-    let reverse: number = 0;
-    let keep: number = 0;
-    temp = n;
-    while (temp != 0) {
-      keep = temp % 10;
-      reverse = reverse * 10 + keep;
-      temp = temp / 10;
-      console.log(keep, reverse, temp);
-    }
-    console.log(keep, reverse);
-    // console.log(n, temp);
-    if (reverse == n) {
-      console.log(n + " là số đối xứng");
-    } else {
-      console.log(n + " không phải là số đối xứng");
-    }
-  }
-  isSdx(111);
+  // function isSdx(n: number) {
+  //   // var temp,
+  //   //   keep,
+  //   //   reverse = 0;
+  //   let temp: number = 0;
+  //   let reverse: number = 0;
+  //   let keep: number = 0;
+  //   temp = n;
+  //   while (temp != 0) {
+  //     keep = temp % 10;
+  //     reverse = reverse * 10 + keep;
+  //     temp = temp / 10;
+  //     console.log(keep, reverse, temp);
+  //   }
+  //   console.log(keep, reverse);
+  //   // console.log(n, temp);
+  //   if (reverse == n) {
+  //     console.log(n + " là số đối xứng");
+  //   } else {
+  //     console.log(n + " không phải là số đối xứng");
+  //   }
+  // }
+  // isSdx(111);
   // Mua xăng
   // N=7
   // 1L:3
@@ -159,10 +166,18 @@ function App() {
       {/* <LifecyCountDown /> */}
       {/* <LifecyCountDownFunction /> */}
       {/* <Practive count={0} /> */}
-      <ButtonLike
+      {/* <ButtonLike
       // icon={<ReactIcons.Lik />}
-      />
-      <Star />
+      /> */}
+      {/* <Star /> */}
+
+      {/* <Form /> */}
+      {/* <ClassComponent />
+      <ClassComponentImg /> */}
+      <FormUI />
+      {/* <SimpleExample /> */}
+      {/* <MultipleInputFieldsExample /> */}
+      {/* <FormMilk /> */}
     </>
   );
 }

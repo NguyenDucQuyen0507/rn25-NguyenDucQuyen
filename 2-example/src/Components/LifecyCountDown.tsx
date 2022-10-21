@@ -19,6 +19,7 @@ class LifecyCountDown extends React.Component<Props, State> {
     this.setState({ number: this.state.number - 1 });
     // }, 1000);
   };
+
   public render() {
     return (
       <div>

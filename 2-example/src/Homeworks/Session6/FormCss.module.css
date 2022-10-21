@@ -1,0 +1,61 @@
+table {
+  display: flex;
+}
+tbody {
+  display: flex;
+}
+tr {
+  display: grid;
+  margin-right: 50px;
+}
+input {
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  width: 300px;
+  height: 35px;
+  /* border: none; */
+  border: 1px solid gray;
+  outline: none;
+}
+img {
+  width: 100%;
+}
+.Form__login {
+  margin: 40px 0;
+  color: rgb(12, 57, 129);
+}
+.Form__title {
+  color: rgb(12, 57, 129);
+  font-size: 20px;
+  font-weight: 700;
+}
+.Form__agree {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.form__check {
+  width: 20px;
+  height: 15px;
+  margin-right: 20px;
+}
+.form__yes {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.form__btn {
+  margin: 20px 0;
+  color: white;
+  border: none;
+  background-color: blue;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.form__btn:active {
+  opacity: 0.7;
+}
+.row {
+  width: 500px;
+}

@@ -12,28 +12,28 @@ function ButtonLike(props: star) {
     setLike(!like);
   };
 
-  const [star, setStar] = useState({ color: "red" });
-  const { color } = star;
-  let Sao = [
-    <ReactIcons.AiFillStar />,
-    <ReactIcons.AiFillStar />,
-    <ReactIcons.AiFillStar />,
-    <ReactIcons.AiFillStar />,
-    <ReactIcons.AiFillStar />,
-  ];
-  const handleClickStar = () => {
-    for (let i = 0; i <= Sao.length; i++) {
-      for (let j = i + 1; j <= Sao.length; j++) {}
-    }
-  };
+  // const [star, setStar] = useState({ color: "red" });
+  // const { color } = star;
+  // let Sao = [
+  //   <ReactIcons.AiFillStar />,
+  //   <ReactIcons.AiFillStar />,
+  //   <ReactIcons.AiFillStar />,
+  //   <ReactIcons.AiFillStar />,
+  //   <ReactIcons.AiFillStar />,
+  // ];
+  // const handleClickStar = () => {
+  //   for (let i = 0; i <= Sao.length; i++) {
+  //     for (let j = i + 1; j <= Sao.length; j++) {}
+  //   }
+  // };
   //star
   //star = 0: 00000
   //star = 4: 11110
   //for(1 -> star: let i=1;i<=star;i++): in ra so 1
-  //for(1 -> star: let i=star+1;i<=5;i++): in ra so 0
+  //for(1 -> star: let i=st ar+1;i<=5;i++): in ra so 0
   return (
     <div>
-      <span style={{ color }}>{Sao}</span>
+      {/* <span style={{ color }}>{Sao}</span> */}
       <button onClick={handleClick}>
         {like ? <ReactIcons.AiOutlineLike /> : <ReactIcons.AiTwotoneLike />}
       </button>

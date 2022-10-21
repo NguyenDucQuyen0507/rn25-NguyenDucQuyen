@@ -18,7 +18,7 @@ function index() {
     color: "yellow",
   };
 
-  const [star, setStar] = useState(0);
+  const [star, setStar] = useState(3); //
   const starIcon: JSX.Element[] = [];
   for (let index = 1; index <= 5; index++) {
     starIcon.push(
@@ -30,7 +30,6 @@ function index() {
       />
     );
   }
-
   return (
     <>
       <div className="text-center">
@@ -39,6 +38,14 @@ function index() {
       </div>
     </>
   );
+  // var arrStar = [1, 2, 3, 4, 5];
+  // return (
+  //   <div>
+  //     {arrStar.map((index) => {
+  //       return index < star ? <faIcon.FaStar /> : <faIcon.FaStarHalf />;
+  //     })}
+  //   </div>
+  // );
 }
 
 export default index;
