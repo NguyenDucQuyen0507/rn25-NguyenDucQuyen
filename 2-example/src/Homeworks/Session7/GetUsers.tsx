@@ -2,10 +2,11 @@ import { type } from "os";
 import React, { useEffect, useState } from "react";
 import { array } from "yup";
 
-type Props = {
-  // id: number;
-  // name: string;
-};
+// const Props: type = {
+//   id: 1,
+//   name: "ass",
+// };
+type Props = {};
 interface type {
   id: number;
   name: string;

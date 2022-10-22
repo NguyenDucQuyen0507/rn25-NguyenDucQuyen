@@ -20,6 +20,7 @@ function RegisterFormWithYup() {
   const formik = useFormik({
     initialValues: {
       name: "",
+      // email: "",
     },
     validationSchema: SignupSchema,
     onSubmit: (values) => {
