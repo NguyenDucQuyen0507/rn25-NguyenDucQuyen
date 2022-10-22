@@ -5,7 +5,6 @@ type Props = {};
 
 export default function BtnGetUsers({}: Props) {
   const [btnuser, setBtnUser] = useState(false);
-
   return (
     <div>
       <button onClick={() => setBtnUser(!btnuser)}>Render</button>

@@ -15,11 +15,11 @@ interface type {
 export default function GetUsers({}: Props) {
   const [users, setUsers] = useState<Array<type>>([]);
   useEffect(() => {
-    // fetch("https://63528f71a9f3f34c3741633b.mockapi.io/api/v1/users", {
-    //   method: "GET",
-    // })
-    // nên dùng method: "GET"
-    fetch("https://63528f71a9f3f34c3741633b.mockapi.io/api/v1/users")
+    fetch("https://63528f71a9f3f34c3741633b.mockapi.io/api/v1/users", {
+      method: "GET",
+    })
+      // nên dùng method: "GET"
+      // fetch("https://63528f71a9f3f34c3741633b.mockapi.io/api/v1/users")
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);

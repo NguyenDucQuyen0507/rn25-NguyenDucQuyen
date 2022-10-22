@@ -32,6 +32,8 @@ import MultipleInputFieldsExample from "./Components/Buoi6/MultipleInputFieldExa
 import FormMilk from "./Components/Buoi6/FormMilk";
 import Login from "./Components/Buoi7/Login";
 import BtnGetUsers from "./Homeworks/Session7/BtnGetUsers";
+import FormSS7 from "./Homeworks/Session7/FormSS7";
+import Form3 from "./Homeworks/Session6/Form3";
 function App() {
   // let style = { color: "red", fontSize: 20 };
   // let isLogin = true;
@@ -183,7 +185,9 @@ function App() {
       {/* <FormMilk /> */}
       {/* <Login /> */}
       {/* <GetUsers /> */}
-      <BtnGetUsers />
+      {/* <BtnGetUsers /> */}
+      {/* <FormSS7 /> */}
+      <Form3 />
     </>
   );
 }
