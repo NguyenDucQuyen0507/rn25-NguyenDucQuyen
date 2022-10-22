@@ -11,19 +11,16 @@ const SignupSchema = Yup.object({
   //   [Yup.ref("password"), null],
   //   "Passwords must match"
   // ),
-  name: Yup.string()
-    .min(3, "The name must be unique and between 3 - 128 characters")
-    .max(128, "The name must be unique and between 3 - 128 characters")
-    .required("The name is not blank"),
+  // name: Yup.string()
+  //   .min(3, "The name must be unique and between 3 - 128 characters")
+  //   .max(128, "The name must be unique and between 3 - 128 characters")
+  //   .required("The name is not blank"),
 });
-
 function RegisterFormWithYup() {
   const formik = useFormik({
     initialValues: {
       name: "",
-      // email: "",
     },
-
     validationSchema: SignupSchema,
     onSubmit: (values) => {
       const url = "https://63528f71a9f3f34c3741633b.mockapi.io/api/v1/users";
@@ -47,14 +44,11 @@ function RegisterFormWithYup() {
     },
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    formik.setFieldValue(e.target.name, e.target.value);
     console.log(e.target);
   };
-  const handleSubmit = (event: any) => {
-    event.preventDefault(); // ngăn chặn load lại trang
 
-    console.log(event);
-  };
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
@@ -64,18 +58,18 @@ function RegisterFormWithYup() {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        <p>{formik.touched.name ? formik.errors.name : null}</p>
+        {/* <p>{formik.errors.name ?? null}</p> */}
       </div>
-      <div>
-        {/* <input
+      {/* <div>
+        <input
           name="email"
           value={formik.values.email}
-          onChange={formik.handleChange}
+          onChange={handleChange}
           onBlur={formik.handleBlur}
         />
-        <p>{formik.touched.name ? formik.errors.name : null}</p> */}
-      </div>
-      <button>Submit</button>
+        <p>{formik.errors.email ?? null}</p>
+      </div> */}
+      <button>POST</button>
     </form>
   );
 }

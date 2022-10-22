@@ -26,12 +26,14 @@ import Form from "./Components/Buoi6/Form";
 import ClassComponent from "./Homeworks/Session3/ClassComponentLike";
 import ClassComponentImg from "./Homeworks/Session3/ClassComponentImg";
 import FormUI from "./Homeworks/Session6/FormUI";
+import GetUsers from "./Homeworks/Session7/GetUsers";
 import SimpleExample from "./Components/Buoi6/SimpleExample";
 import MultipleInputFieldsExample from "./Components/Buoi6/MultipleInputFieldExample";
 import FormMilk from "./Components/Buoi6/FormMilk";
+import Login from "./Components/Buoi7/Login";
 function App() {
-  let style = { color: "red", fontSize: 20 };
-  let isLogin = true;
+  // let style = { color: "red", fontSize: 20 };
+  // let isLogin = true;
 
   // function isSnt(n: number) {
   //   var dem = 0;
@@ -174,10 +176,12 @@ function App() {
       {/* <Form /> */}
       {/* <ClassComponent />
       <ClassComponentImg /> */}
-      <FormUI />
+      {/* <FormUI /> */}
       {/* <SimpleExample /> */}
       {/* <MultipleInputFieldsExample /> */}
       {/* <FormMilk /> */}
+      {/* <Login /> */}
+      <GetUsers />
     </>
   );
 }

@@ -9,7 +9,9 @@ const SignupSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email")
     .required("Required"),
-  password: Yup.string().required("Password is required"),
+  password: Yup.string()
+    .min(8, ({ min }) => `Password must be at least ${min} characters`)
+    .required("Password is required"),
   passwordConfirmation: Yup.string().oneOf(
     [Yup.ref("password"), null],
     "Passwords must match"
@@ -20,6 +22,8 @@ const SignupSchema = Yup.object({
     .min(2, "Mininum 2 characters")
     .max(15, "Maximum 15 characters")
     .required("The name is not blank"),
+  lastName: Yup.string().required("The last name is not blank"),
+  number: Yup.string(),
 });
 function FormUI() {
   const formik = useFormik({
@@ -27,9 +31,28 @@ function FormUI() {
       name: "",
       lastName: "",
       email: "",
+      password: "",
+      passwordConfirmation: "",
     },
     validationSchema: SignupSchema,
     onSubmit: (values) => {
+      // const url = "https://63528f71a9f3f34c3741633b.mockapi.io/api/v1/users";
+      // fetch(url, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(values),
+      // })
+      //   .then((response) => response.json())
+      //   .then((json) => {
+      //     // Xử lý kết quả JSON ở đây
+      //     console.log(json);
+      //   })
+      //   .catch((error) => {
+      //     // Nếu có lỗi
+      //     console.error(error);
+      //   });
       console.log(values);
     },
   });
@@ -37,9 +60,11 @@ function FormUI() {
   //     e.preventDefault(); // ngăn chặn load lại trang
   //     console.log(e);
   //   };
-  //   const handleChange = (e: any) => {
-  //     console.log(e.target);
-  //   };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    formik.setFieldValue(e.target.name, e.target.value);
+    console.log(e.target);
+  };
+
   //   const handleBlur = (e: any) => {
   //     console.log(e.target);
   //   };
@@ -74,6 +99,7 @@ function FormUI() {
                         onBlur={formik.handleBlur}
                       />
                       <p style={{ margin: "0px" }}>
+                        {/* {formik.errors.name ?? null} */}
                         {formik.touched.name ? formik.errors.name : null}
                       </p>
                     </td>
@@ -92,7 +118,9 @@ function FormUI() {
                         onBlur={formik.handleBlur}
                       />
                       <p style={{ margin: "0px" }}>
-                        {formik.touched.name ? formik.errors.name : null}
+                        {formik.touched.lastName
+                          ? formik.errors.lastName
+                          : null}
                       </p>
                     </td>
                   </tr>
@@ -142,13 +170,37 @@ function FormUI() {
                   <tr>
                     <td>Password </td>
                     <td>
-                      <input type="password" name="" id="" />
+                      <input
+                        type="password"
+                        name="password"
+                        id=""
+                        value={formik.values.password}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                      />
+                      <p style={{ margin: "0px" }}>
+                        {formik.touched.password
+                          ? formik.errors.password
+                          : null}
+                      </p>
                     </td>
                   </tr>
                   <tr>
                     <td>Confirm Password</td>
                     <td>
-                      <input type="password" name="" id="" />
+                      <input
+                        type="password"
+                        name="passwordConfirmation"
+                        id=""
+                        value={formik.values.passwordConfirmation}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                      />
+                      <p style={{ margin: "0px" }}>
+                        {formik.touched.passwordConfirmation
+                          ? formik.errors.passwordConfirmation
+                          : null}
+                      </p>
                     </td>
                   </tr>
                 </tbody>
