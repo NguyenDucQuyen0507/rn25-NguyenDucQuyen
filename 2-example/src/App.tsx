@@ -19,6 +19,7 @@ import BlockUI7 from "./Homeworks/Session2/BlockUI7/BlockUI7";
 import CountDown from "./Components/CountDown";
 import LifecyCountDown from "./Components/LifecyCountDown";
 import LifecyCountDownFunction from "./Components/LifecyCountDownFunction";
+import Router from "./Components/Buoi8/Index";
 import Practive from "./Components/Practive";
 import ButtonLike from "./Components/ButtonLike";
 import Star from "./Components/Star";
@@ -187,7 +188,8 @@ function App() {
       {/* <GetUsers /> */}
       {/* <BtnGetUsers /> */}
       {/* <FormSS7 /> */}
-      <Form3 />
+      {/* <Form3 /> */}
+      <Router />
     </>
   );
 }

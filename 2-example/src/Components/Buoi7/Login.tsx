@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -51,14 +51,20 @@ function RegisterFormWithYup() {
   };
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <div>
-        <input
-          name="name"
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
+    <form onSubmit={formik.handleSubmit} style={{ textAlign: "center" }}>
+      <div className="container d-flex justify-content-center" style={{}}>
+        <tr>
+          <td style={{ marginRight: "10px" }}>Name: </td>
+          <td>
+            <input
+              name="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </td>
+        </tr>
+
         {/* <p>{formik.errors.name ?? null}</p> */}
       </div>
       {/* <div>
@@ -70,7 +76,7 @@ function RegisterFormWithYup() {
         />
         <p>{formik.errors.email ?? null}</p>
       </div> */}
-      <button>POST</button>
+      <button className="btn btn-primary m-3">POST</button>
     </form>
   );
 }

@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function App() {
-  const [posts, setPosts] = useState([]);
+type Props = {};
 
-  return {};
-}
+const LoadDB = (props: Props) => {
+  const [user, setUser] = useState("");
 
-export default App;
+  return <div>LoadDB</div>;
+};
